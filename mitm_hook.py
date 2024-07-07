@@ -13,7 +13,7 @@ class Hook:
         self.zipped_scores = []
 
     def exit_later(self):
-        print("数据已成功上传。程序将在3秒后执行自动清理动作。")
+        print("数据已成功上传。请不要立刻退出本程序，程序将在3秒后执行自动清理动作。")
         time.sleep(3)
         ctx.master.shutdown()
 
@@ -60,7 +60,7 @@ class Hook:
             # 使用gzip
             file_name = f"scores_{datetime.datetime.now()}.json"
             print(
-                f"成绩数据已获取。保持本程序打开，在电脑版微信打开DonNote小程序，选择“导入成绩”功能，数据将会被自动提交给DonNote。")
+                f"成绩数据已获取。保持本程序打开，在电脑版微信打开DonNote小程序，选择“数据同步-成绩同步”功能，数据将会被自动提交给DonNote。")
 
 
 addons = [Hook()]

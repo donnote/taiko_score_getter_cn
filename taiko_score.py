@@ -25,7 +25,7 @@ if __name__ == '__main__':
         print("初始化失败，请检查错误信息。")
         time.sleep(5)
         exit(1)
-    print("正在监听成绩数据。请使用电脑端微信，打开鼓众广场小程序，点击我的成绩，等待程序自动获取成绩数据。")
+    print('正在监听成绩数据。请使用电脑端微信，打开鼓众广场小程序，点击"游戏成绩"，等待程序自动获取成绩数据。')
     mitmdump(['-s', get_resource_real_path('mitm_hook.py'), '-q'])
     print("正在清理本地代理配置")
     post_clean = subprocess.Popen([get_resource_real_path('post_clean.bat')], shell=True)
